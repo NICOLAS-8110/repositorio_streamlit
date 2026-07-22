@@ -20,7 +20,7 @@ def toss_coin(n):
         if r == 1:
             outcome_1_count += 1
         mean = outcome_1_count / outcome_no
-        chart.line_chat(values)
+        chart.line_chart(values)
         time.sleep(0.05)
 
     return mean
