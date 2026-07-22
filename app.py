@@ -4,7 +4,7 @@ import time
 
 st.header('Lanzar una moneda')
 
-chart = st.line_chart([0.5])
+chart = st.empty()
 
 def toss_coin(n):
 
@@ -13,13 +13,14 @@ def toss_coin(n):
     mean = None
     outcome_no = 0
     outcome_1_count = 0
+    values = []
 
     for r in trial_outcomes:
         outcome_no +=1
         if r == 1:
             outcome_1_count += 1
         mean = outcome_1_count / outcome_no
-        chart.add_rows([mean])
+        chart.line_chat(values)
         time.sleep(0.05)
 
     return mean
